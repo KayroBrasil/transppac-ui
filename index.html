@@ -106,13 +106,17 @@
         <section class="area-solicitacoes">
           <div class="ferramentas">
             <div class="busca">
+              <i class="bi bi-search"></i>
               <input
                 type="search"
                 placeholder="Buscar chamado..."
                 aria-label="Buscar chamado..."
               />
             </div>
-            <button type="button" class="botao-filtro">Filtrar</button>
+            <button type="button" class="botao-filtro">
+              <i class="bi bi-funnel-fill"></i>
+              Filtrar
+            </button>
           </div>
           <div class="tabela-container">
             <table>
@@ -129,7 +133,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr data-status="pendente">
                   <td>#1234</td>
 
                   <td>Pronto Socorro</td>
@@ -139,7 +143,7 @@
                   <td>Raio-X de Tór...</td>
 
                   <td class="espera critica">
-                    <span aria-hidden="true">⏰</span>
+                    <i class="bi bi-clock"></i>
                     15 min
                   </td>
 
@@ -147,14 +151,14 @@
                     <span class="status pendente"> Pendente </span>
                   </td>
 
-                  <td>Não alocado</td>
+                  <td class="nao-alocado">Não alocado</td>
 
                   <td>
                     <button type="button" class="acao">Gerenciar</button>
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-status="despachado">
                   <td>#1233</td>
 
                   <td>UTI Adulto</td>
@@ -164,7 +168,7 @@
                   <td>Cirurgia de e...</td>
 
                   <td class="espera">
-                    <span aria-hidden="true">⏰</span>
+                    <i class="bi bi-clock"></i>
                     --
                   </td>
 
@@ -184,7 +188,7 @@
                   </td>
                 </tr>
 
-                <tr>
+                <tr data-status="concluido">
                   <td>#1232</td>
 
                   <td>Enfermaria 2</td>
@@ -194,7 +198,7 @@
                   <td>Alta de pacien...</td>
 
                   <td class="espera">
-                    <span aria-hidden="true">⏰</span>
+                    <i class="bi bi-clock"></i>
                     --
                   </td>
 
