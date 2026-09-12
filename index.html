@@ -1,11 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Controle</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="menu-lateral">
+        <div class="logo">
+          <span>Maqueiros Web</span>
+        </div>
+        <nav class="navegacao">
+          <a href="#" class="item-menu"> Painel </a>
+          <a href="#" class="item-menu"> Nova Solicitação </a>
+          <a href="#" class="item-menu"> Meus Chamados </a>
+          <a href="#" class="item-menu"> Maqueiros </a>
+        </nav>
+        <div class="usuario">Usuário</div>
+      </aside>
+      <main class="conteudo-principal">
+        <header class="cabecalho-pagina">
+          <div class="titulo-pagina">
+            <h1>Solicitações Ativas</h1>
+            <p>Acompanhe a fila de pacientes e despachos em tempo real.</p>
+          </div>
+          <button type="button" class="botao-nova-solicitacao">
+            + Nova Solicitação
+          </button>
+        </header>
+        <section class="area-solicitacoes">
+          <div class="ferramentas">
+            <div class="busca">
+              <input
+                type="search"
+                placeholder="Buscar chamado..."
+                aria-label="Buscar chamado..."
+              />
+            </div>
+            <button type="button" class="botao-filtro">Filtrar</button>
+          </div>
+          <div class="tabela-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Setor solicitante</th>
+                  <th>Setor destino</th>
+                  <th>Motivo</th>
+                  <th>Espera</th>
+                  <th>Status</th>
+                  <th>Maqueiro alocado</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1234</td>
+
+                  <td>Pronto Socorro</td>
+
+                  <td>Raio-X</td>
+
+                  <td>Raio-X de Tór...</td>
+
+                  <td class="espera critica">
+                    <span aria-hidden="true">⏰</span>
+                    15 min
+                  </td>
+
+                  <td>
+                    <span class="status pendente"> Pendente </span>
+                  </td>
+
+                  <td>Não alocado</td>
+
+                  <td>
+                    <button type="button" class="acao">Gerenciar</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>#1233</td>
+
+                  <td>UTI Adulto</td>
+
+                  <td>Centro Cirúrgico</td>
+
+                  <td>Cirurgia de e...</td>
+
+                  <td class="espera">
+                    <span aria-hidden="true">⏰</span>
+                    --
+                  </td>
+
+                  <td>
+                    <span class="status despachado"> Despachado </span>
+                  </td>
+
+                  <td>
+                    <div class="maqueiro">
+                      <span class="avatar">CM</span>
+                      <span>Carlos M.</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <button type="button" class="acao">Gerenciar</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>#1232</td>
+
+                  <td>Enfermaria 2</td>
+
+                  <td>Alta (Portaria)</td>
+
+                  <td>Alta de pacien...</td>
+
+                  <td class="espera">
+                    <span aria-hidden="true">⏰</span>
+                    --
+                  </td>
+
+                  <td>
+                    <span class="status concluido"> Concluído </span>
+                  </td>
+
+                  <td>
+                    <div class="maqueiro">
+                      <span class="avatar">AP</span>
+                      <span>Ana P.</span>
+                    </div>
+                  </td>
+
+                  <td>
+                    <button type="button" class="acao link">
+                      Ver Detalhes
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paginacao">
+            <p>Mostrando 1 a 3 de 24 solicitações</p>
+            <div class="botoes-paginacao">
+              <button type="button">Anterior</button>
+
+              <button type="button">Próxima</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
