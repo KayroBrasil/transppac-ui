@@ -1,24 +1,24 @@
 const maqueiros = [
     {
-        nome: "Carlos Melo",
+        nome: "João Rodrigues",
         matricula: "10245",
         status: "Disponível",
         turno: "Manhã"
     },
     {
-        nome: "Ana Paula",
+        nome: "Maria Josefa",
         matricula: "10246",
         status: "Em rota",
         turno: "Manhã"
     },
     {
-        nome: "Roberto Silva",
+        nome: "Paulo Marques",
         matricula: "10289",
         status: "Disponível",
         turno: "Tarde"
     },
     {
-        nome: "Juliana Costa",
+        nome: "Janaina Melo",
         matricula: "10294",
         status: "Ausente",
         turno: "Noite"
@@ -51,12 +51,12 @@ maqueiros.forEach(function(maqueiro) {
             </p>
 
             <span class="turno">
-                ☀ Turno: ${maqueiro.turno}
+                 Turno: ${maqueiro.turno}
             </span>
 
             <div class="card-acoes">
-                <button>✎ Editar</button>
-                <button>🗑 Excluir</button>
+                <button> Editar</button>
+                <button> Excluir</button>
             </div>
 
         </div>

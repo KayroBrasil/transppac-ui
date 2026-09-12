@@ -235,21 +235,6 @@ nav a.ativo {
     border-radius: 5px;
 }
 
-.disponível {
-    background: #e7f9ee;
-    color: #149447;
-}
-
-.em-rota {
-    background: #fff0f0;
-    color: #e34b4b;
-}
-
-.ausente {
-    background: #eef0f3;
-    color: #7d8591;
-}
-
 /* =========================
    TURNO
 ========================= */
