@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maqueiros Web - Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Jacques+Francois&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ancizar+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Kedebideri&display=swap" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
 </head>
 <body>
-    
+    <div class="login-container">
+        <!-- Esquerda: Imagem de Fundo (Banner) -->
+        <div class="login-banner"></div>
+        
+        <!-- Direita: Formulário de Login -->
+        <div class="login-form-section">
+            <div class="form-wrapper">
+                <div class="logo-container">
+                    <img src="./images/logo.png" alt="Logo Maqueiros Web" class="logo">
+                    <h1>Maqueiros Web</h1>
+                </div>
+                
+                <div class="form-header">
+                    <h2>Bem-vindo de volta!</h2>
+                    <p>Insira suas credenciais para acessar o painel de controle.</p>
+                </div>
+
+                <form action="#" method="POST" class="login-form">
+                    <div class="input-group">
+                        <label for="email">E-mail Institucional</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Entrar no Sistema</button>
+                </form>
+
+                <div class="form-footer">
+                    <p>Ainda não possui cadastro? <a href="#">Solicitar acesso à TI</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
