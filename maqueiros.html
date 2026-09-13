@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maqueiros Web</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+             Maqueiros Web
+        </div>
+
+        <nav>
+            <a href="#">Painel</a>
+
+            <a href="#">Nova Solicitação</a>
+
+            <a href="#">Meus Chamados</a>
+
+            <a href="#" class="ativo">Maqueiros</a>
+        </nav>
+
+        <div class="usuario">
+            <div class="usuario-foto">●</div>
+
+            <div>
+                <strong>Fernando Silva</strong>
+                <small>Administrador Logístico</small>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+
+        <header class="page-header">
+
+            <div>
+                <h1>Equipe de Maqueiros</h1>
+
+                <p>
+                    Gerenciamento de profissionais, escalas e disponibilidades.
+                </p>
+            </div>
+
+            <button id="btnNovoMaqueiro">
+                 + Novo Maqueiro
+            </button>
+
+        </header>
+
+
+        <!-- BARRA DE PESQUISA -->
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="buscarMaqueiro"
+                placeholder="🔍  Buscar por nome ou matrícula..."
+            >
+
+        </section>
+
+
+        <!-- CARDS -->
+        <section
+            class="maqueiros-grid"
+            id="listaMaqueiros">
+        </section>
+
+
+        <!-- PAGINAÇÃO -->
+        <div
+            class="paginacao"
+            id="paginacao">
+        </div>
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
