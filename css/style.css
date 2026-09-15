@@ -122,6 +122,29 @@ body {
     outline: none;
     border-color: #3762ae;
     box-shadow: 0 0 5px rgba(55,98,174,0.3);
+
+}
+/* Cabeçalho do campo de senha */
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.password-header label {
+    margin-bottom: 0;
+}
+
+.forgot-password {
+    color: #3762ae;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 /* Botão de Submit */
