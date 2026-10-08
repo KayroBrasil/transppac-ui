@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | HMS Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-centere">
+
+    <!-- Sidebar de Navegação -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>HMS Transport</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">Painel Geral</a></li>
+                <li><a href="form-solicitacao.html">Nova Solicitação</a></li>
+                <li><a href="form-maqueiro.html">Maqueiros</a></li>
+                <li><a href="form-setor.html">Setores</a></li>
+                <li><a href="form-equipe.html">Equipes</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="btn-logout" onclick="window.location.href='index.html'">Sair do Sistema</button>
+        </div>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Reutilização da faixa de identidade visual -->
+        <div class="brand-stripe"></div>
+        
+        <header class="topbar">
+            <div>
+                <h2 style="font-size: 18px; color: var(--pmt-azul-escuro);">Central de Monitoramento</h2>
+            </div>
+            <div>
+                <span id="datetime" style="font-size: 14px; color: #666; font-weight: 500;"></span>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+            
+            <!-- Grid de Indicadores (Cards com as cores da Logo) -->
+            <div class="metrics-grid">
+                <div class="metric-card card-pendentes">
+                    <div class="metric-title">Solicitações Pendentes</div>
+                    <div class="metric-value">12</div>
+                </div>
+                
+                <div class="metric-card card-andamento">
+                    <div class="metric-title">Transportes em Andamento</div>
+                    <div class="metric-value">05</div>
+                </div>
+                
+                <div class="metric-card card-concluidas">
+                    <div class="metric-title">Concluídas Hoje</div>
+                    <div class="metric-value">48</div>
+                </div>
+                
+                <div class="metric-card card-maqueiros">
+                    <div class="metric-title">Maqueiros Ativos</div>
+                    <div class="metric-value">08</div>
+                </div>
+            </div>
+
+            <!-- Tabela de Controle -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Fila de Transportes Ativos</h3>
+                    <button class="btn-action" style="padding: 10px 15px; font-size: 14px;" onclick="window.location.href='form-solicitacao.html'">+ Nova Solicitação</button>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Origem</th>
+                            <th>Destino</th>
+                            <th>Motivo</th>
+                            <th>Maqueiro</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1042</td>
+                            <td>Pronto Socorro</td>
+                            <td>Radiologia (Raio-X)</td>
+                            <td>Exame de Imagem</td>
+                            <td>-</td>
+                            <td><span class="status-badge status-pendente">Aguardando</span></td>
+                            <td><button class="btn-action">Atribuir</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1041</td>
+                            <td>UTI</td>
+                            <td>Centro Cirúrgico</td>
+                            <td>Encaminhamento CC</td>
+                            <td>Carlos Silva</td>
+                            <td><span class="status-badge status-andamento">Em Trânsito</span></td>
+                            <td><button class="btn-action" style="background-color: var(--pmt-verde);">Finalizar</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1040</td>
+                            <td>Enfermaria B</td>
+                            <td>Alta</td>
+                            <td>Alta Médica</td>
+                            <td>João Souza</td>
+                            <td><span class="status-badge status-concluido">Concluído</span></td>
+                            <td><button class="btn-action" style="background-color: #ccc; color: #333;" disabled>Detalhes</button></td>
+                        </tr>
+                        <tr>
+                            <td>#1039</td>
+                            <td>Enfermaria A</td>
+                            <td>UTI</td>
+                            <td>Transferência Interna</td>
+                            <td>-</td>
+                            <td><span class="status-badge status-pendente">Aguardando</span></td>
+                            <td><button class="btn-action">Atribuir</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

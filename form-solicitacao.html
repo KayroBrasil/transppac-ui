@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Solicitação | HMS Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-centered">
+
+    <div class="request-container">
+        <div class="brand-stripe"></div>
+        
+        <div class="request-header">
+            <h1>Nova Solicitação</h1>
+            <p>Preencha os dados para solicitar um transporte de paciente.</p>
+        </div>
+
+        <form class="request-form" id="form-solicitacao">
+            
+            <!-- Seção de Setores -->
+            <div class="row-grid">
+                <div class="input-group">
+                    <label for="setor-solicitante">Setor Solicitante</label>
+                    <select id="setor-solicitante" name="setor-solicitante" required>
+                        <option value="" disabled selected>De onde...</option>
+                        <option value="pronto-socorro">Pronto Socorro</option>
+                        <option value="uti">UTI</option>
+                        <option value="centro-cirurgico">Centro Cirúrgico</option>
+                        <option value="enfermaria-a">Enfermaria A</option>
+                        <option value="enfermaria-b">Enfermaria B</option>
+                        <option value="radiologia">Radiologia (Raio-X)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="setor-destino">Setor de Destino</label>
+                    <select id="setor-destino" name="setor-destino" required>
+                        <option value="" disabled selected>Para onde...</option>
+                        <option value="pronto-socorro">Pronto Socorro</option>
+                        <option value="uti">UTI</option>
+                        <option value="centro-cirurgico">Centro Cirúrgico</option>
+                        <option value="enfermaria-a">Enfermaria A</option>
+                        <option value="enfermaria-b">Enfermaria B</option>
+                        <option value="radiologia">Radiologia (Raio-X)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Seção de Materiais (Múltipla Escolha) -->
+            <div class="input-group">
+                <label>Materiais Necessários (opcional)</label>
+                <div class="materials-grid">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="materiais" value="maca">
+                        <span>Maca</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="materiais" value="cadeira-rodas">
+                        <span>Cadeira de Rodas</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="materiais" value="cilindro-o2">
+                        <span>Cilindro de O2</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="materiais" value="kit-cc">
+                        <span>Kit CC</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="materiais" value="bomba-infusao">
+                        <span>Bomba de Infusão</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Seção de Motivo com Campo Dinâmico -->
+            <div class="input-group">
+                <label for="motivo">Motivo do Transporte</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="" disabled selected>Selecione o motivo...</option>
+                    <option value="alta-medica">Alta Médica</option>
+                    <option value="transferencia-interna">Transferência Interna (Leito)</option>
+                    <option value="exame-imagem">Exame de Imagem / Diagnóstico</option>
+                    <option value="centro-cirurgico">Encaminhamento ao Centro Cirúrgico</option>
+                    <option value="obito">Óbito</option>
+                    <option value="outro">Outro...</option>
+                </select>
+
+                <!-- Campo dinâmico: Aparece apenas se "Outro" for selecionado -->
+                <div class="hidden-field" id="grupo-motivo-outro">
+                    <input type="text" id="motivo-outro" name="motivo-outro" placeholder="Por favor, descreva o motivo...">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Criar Solicitação</button>
+
+            <div id="feedback" class="feedback-message"></div>
+        </form>
+    </div>
+
+    <script src="js/solicitacao.js"></script>
+</body>
+</html>

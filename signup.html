@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | HMS Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-centered">
+
+    <div class="form-container">
+        <div class="brand-stripe"></div>
+        
+        <div class="form-header">
+            <h1>Criar Conta</h1>
+            <p>Cadastre-se para acessar o HMS Transport</p>
+        </div>
+
+        <form class="main-form" id="form-signup">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@hmstransport.com.br" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required minlength="6">
+            </div>
+
+            <div class="input-group">
+                <label for="setor">Setor</label>
+                <select id="setor" name="setor" required>
+                    <option value="" disabled selected>Selecione o seu setor...</option>
+                    <option value="transporte">Transporte (Maqueiros)</option>
+                    <option value="enfermagem">Enfermagem</option>
+                    <option value="medico">Corpo Médico</option>
+                    <option value="administrativo">Administrativo</option>
+                    <option value="servfaz">Servfaz (Terceirizado)</option>
+                </select>
+            </div>
+
+            <!-- Campo dinâmico: Aparece apenas se "Servfaz" for selecionado -->
+            <div class="input-group hidden-field" id="grupo-equipe">
+                <label for="equipe">Equipe</label>
+                <select id="equipe" name="equipe">
+                    <option value="" disabled selected>Selecione a sua equipe...</option>
+                    <option value="plantaoAD">Plantão A (Dia)</option>
+                    <option value="plantaoAN">Plantão A (Noite)</option>
+                    <option value="plantaoBD">Plantão B (Dia)</option>
+                    <option value="plantaoBN">Plantão B (Noite)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+
+            <div class="form-link">
+                Já possui uma conta? <a href="index.html">Faça login aqui</a>
+            </div>
+
+            <div id="feedback" class="feedback-message"></div>
+        </form>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>
