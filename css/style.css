@@ -499,3 +499,109 @@ tbody tr:hover {
         grid-template-columns: 1fr; /* Empilha os campos em telas pequenas */
     }
 }
+
+
+/* Cadastro de Maqueiro */
+
+.cadastro-maqueiro {
+    width: 100%;
+    max-width: 550px;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cadastro-maqueiro .faixa-colorida {
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        #124090 25%,
+        #2ca53e 25% 50%,
+        #f7b415 50% 75%,
+        #14aee1 75%
+    );
+}
+
+.cadastro-maqueiro .form-header {
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cadastro-maqueiro .form-header-content {
+    padding: 32px 30px 20px;
+}
+
+.cadastro-maqueiro .form-header h1 {
+    color: #173d78;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.cadastro-maqueiro .form-header p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.cadastro-maqueiro form {
+    padding: 28px 30px 30px;
+}
+
+.cadastro-maqueiro .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.cadastro-maqueiro .form-group label {
+    color: #244574;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cadastro-maqueiro .form-group input,
+.cadastro-maqueiro .form-group select {
+    width: 100%;
+    height: 43px;
+    padding: 0 14px;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    background-color: #fafafa;
+    color: #444444;
+    font-size: 14px;
+}
+
+.cadastro-maqueiro .form-group input:focus,
+.cadastro-maqueiro .form-group select:focus {
+    outline: none;
+    border-color: #124090;
+}
+
+.cadastro-maqueiro button {
+    width: 100%;
+    height: 46px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: #124090;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastro-maqueiro button:hover {
+    background-color: #0d326f;
+}
+
+@media (max-width: 600px) {
+    .cadastro-maqueiro .form-header-content {
+        padding: 26px 20px 18px;
+    }
+
+    .cadastro-maqueiro form {
+        padding: 24px 20px;
+    }
+}
