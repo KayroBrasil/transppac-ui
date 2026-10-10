@@ -1,0 +1,136 @@
+
+/* Tela de cadastro - HMS Transport */
+
+* {
+    box-sizing: border-box;
+}
+
+body.body-centered {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+.brand-stripe {
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        #124090 0%,
+        #124090 25%,
+        #2ca53e 25%,
+        #2ca53e 50%,
+        #f7b415 50%,
+        #f7b415 75%,
+        #14aee1 75%,
+        #14aee1 100%
+    );
+}
+
+.form-header {
+    text-align: center;
+    padding: 32px 30px 20px;
+}
+
+.form-header h1 {
+    margin: 0 0 10px;
+    color: #124090;
+    font-size: 24px;
+}
+
+.form-header p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.main-form {
+    padding: 0 30px 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #124090;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #14aee1;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background-color: #124090;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0c306f;
+}
+
+.form-link {
+    text-align: center;
+    margin: 22px 0 0;
+    font-size: 13px;
+}
+
+.form-link a {
+    color: #14aee1;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.feedback-message {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+@media (max-width: 520px) {
+    body.body-centered {
+        padding: 15px;
+    }
+
+    .main-form {
+        padding: 0 20px 25px;
+    }
+}
