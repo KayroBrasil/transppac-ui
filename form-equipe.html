@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Equipe | HMS Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-centered">
+
+    <div class="form-container">
+        <!-- Faixa de cores oficial da logomarca -->
+        <div class="brand-stripe"></div>
+        
+        <div class="form-header">
+            <h1>Cadastro de Equipe</h1>
+            <p>Adicione uma nova equipe de plantão ao sistema</p>
+        </div>
+
+        <form class="main-form" id="form-equipe">
+            <div class="input-group">
+                <label for="nome-equipe">Nome da Equipe</label>
+                <input type="text" id="nome-equipe" name="nome" placeholder="Ex: Plantão C (Dia)" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Salvar Equipe</button>
+
+            <div id="feedback" class="feedback-message"></div>
+        </form>
+    </div>
+
+</body>
+</html>
