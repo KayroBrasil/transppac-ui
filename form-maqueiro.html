@@ -1,65 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Maqueiro</title>
+    <title>Registro de Maqueiros | HMS Transport</title>
+    <!-- Referência ao CSS global já existente -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body-centered">
 
-    <main class="form-container cadastro-maqueiro">
+    <div class="request-container">
+        <!-- Faixa de cores da logomarca -->
+        <div class="brand-stripe"></div>
+        
+        <div class="request-header">
+            <h1>Cadastro de Maqueiro</h1>
+            <p>Registre os dados do profissional de transporte</p>
+        </div>
 
-        <header class="form-header">
-            <div class="faixa-colorida"></div>
-
-            <div class="form-header-content">
-                <h1>Cadastro de Maqueiro</h1>
-                <p>Registre os dados do profissional de transporte</p>
-            </div>
-        </header>
-
-        <form id="form-maqueiro">
-
-            <div class="form-group">
+        <form class="request-form" id="form-maqueiro">
+            <div class="input-group">
                 <label for="matricula">Matrícula</label>
-                <input
-                    type="text"
-                    id="matricula"
-                    name="matricula"
-                    placeholder="Ex: 2026-12345"
-                    required
-                >
+                <input type="text" id="matricula" name="matricula" placeholder="Ex: 2026-12345" required>
             </div>
 
-            <div class="form-group">
+            <div class="input-group">
                 <label for="nome">Nome Completo</label>
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite o nome do maqueiro"
-                    required
-                >
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do maqueiro" required>
             </div>
 
-            <div class="form-group">
+            <div class="input-group">
                 <label for="equipe">Equipe (Plantão)</label>
                 <select id="equipe" name="equipe" required>
-                    <option value="">Selecione a equipe...</option>
-                    <option value="A">Equipe A</option>
-                    <option value="B">Equipe B</option>
-                    <option value="C">Equipe C</option>
-                    <option value="D">Equipe D</option>
+                    <option value="" disabled selected>Selecione a equipe...</option>
+                    <option value="Plantão A (Dia)">Plantão A (Dia)</option>
+                    <option value="Plantão A (Noite)">Plantão A (Noite)</option>
+                    <option value="Plantão B (Dia)">Plantão B (Dia)</option>
+                    <option value="Plantão B (Noite)">Plantão B (Noite)</option>
                 </select>
             </div>
 
-            <button type="submit">Salvar Registro</button>
+            <button type="submit" class="btn-submit">Salvar Registro</button>
 
+            <!-- Área de feedback de sucesso ou erro -->
+            <div id="feedback" class="feedback-message"></div>
         </form>
+    </div>
 
-    </main>
-<script src="js/maqueiro.js"></script>
+    <!-- Referência ao script da página -->
+    <script src="js/maqueiro.js"></script>
 </body>
 </html>
